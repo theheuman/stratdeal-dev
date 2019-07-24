@@ -1,0 +1,169 @@
+extends layout
+
+block content
+    div(class="container-fluid" style="margin-top: 125px; width: 100%; padding-bottom: 150px;")
+
+          div(class="row align-items-center my-5")
+            div(class="col")
+              div(class="row ml-4 mb-3")
+                h1(class="font-weight-light") MANA BROKERS, LLC/h1)
+
+              div(class="row")
+
+
+            div(class="col")
+              a(class="btn float-right" href="#") + ADD NEW
+
+
+          div(class="row align-items-center pt-2 my-5" style="color: white; background: url('img/blue_background.png') no-repeat;")
+            div(class="col")
+              div(class="row ml-4 mb-3")
+                h4(class="font-weight-light") COMPANIES
+
+              div(class="row ml-2 mb-3")
+                div(class="col my-auto")
+                  img(class="img-fluid rounded" src="http://placehold.it/100x100" alt="Profile Picture")
+                  span(class="align-middle ml-2") Patrick Daniels
+
+
+
+            div(class="col")
+              a(class="btn btn-primary float-right" style="color: #000066;" href="#") Edit
+
+
+          ul(id="content-nav" class="nav")
+            li(class="nav-item")
+              button(class="content-header nav-link disabled" onclick="hide('profile')") PROFILE
+
+            li(class="nav-item")
+              button(class="content-header nav-link" onclick="hide('mandate')") MANDATE
+
+            li(class="nav-item")
+              button(class="content-header nav-link" onclick="hide('financials')") FINANCIALS
+
+            li(class="nav-item")
+              button(class="content-header nav-link" onclick="hide('listings')") LISTINGS
+
+          div(id="profile" class="content-divs")
+            div(class="row mt-4")
+            div(class="col ml-4")
+              form(name="editCompaniesForm" style="")
+                h3(class="modal-title") COMPANIES
+
+                div(class="form-body")
+                  div(class="form-group")
+                    label STREET 1
+                    input(type="text" class="form-control" name="street1" placeholder="STREET 1" required="" style="")
+
+                  div(class="form-group")
+                    label STREET 2
+                    input(type="text" class="form-control" name="street2" placeholder="STREET 2" required="" style="")
+
+                  div(class="form-group")
+                    label STREET 3
+                    input(type="text" class="form-control" name="street3" placeholder="STREET 3" required="" style="")
+
+                  div(class="form-group")
+                    label CITY
+                    input(type="text" class="form-control" name="city" placeholder="CITY" required="" style="")
+
+                  div(class="form-group")
+                    label REGION
+                    input(type="text" class="form-control" name="region" placeholder="REGION" required="" style="")
+
+                  div(class="form-group")
+                    label POSTAL CODE
+                    input(type="text" class="form-control" name="postalcode" placeholder="POSTAL CODE" required="" style="")
+
+
+            div(class="col mr-4")
+              form(name="editProfilesForm" style="")
+                h3(class="modal-title") FINANCIALS
+
+                div(class="form-body")
+                  div(class="form-group")
+                    label PHONE
+                    input(type="text" class="form-control" name="phone" placeholder="PHONE" required="" style="")
+
+                  div(class="form-group")
+                    label EMAIL
+                    input(type="email" class="form-control" name="email" placeholder="EMAIL" required="" style="")
+
+                  div(class="form-group")
+                    label WEBSITE
+                    input(type="text" class="form-control" name="website" placeholder="WEBSITE" required="" style="")
+
+                  div(class="form-group")
+                    label PRICE
+                    input(type="text" class="form-control" name="price" placeholder="PRICE" required="" style="")
+
+                  div(class="form-footer")
+                    button(class="btn btn-primary btn-px-80 float-right" type="button" disabled="disabled") Submit
+
+
+
+
+          div(id="mandate" class="content-divs" style="display: none")
+            This will be your mandate tab
+
+
+          div(id="financials" class="content-divs" style="display: none")
+            form(name="addFinancialsForm" style="")
+              h3 (class="modal-title") FINANCIALS
+
+              div(class="form-body")
+                div(class="form-group")
+                  label EBITDA
+                  input(type="text" class="form-control" name="ebitda" placeholder="EBITDA" required="" style="")
+
+                div(class="form-group")
+                  label REVENUE
+                  input(type="text" class="form-control" name="revenue" placeholder="Revenue" required="" style="")
+
+                div(class="form-group")
+                  label ASSETS
+                  input(type="text" class="form-control" name="assets" placeholder="Assets" required="" style="")
+
+                div(class="form-group")
+                  label DEBT
+                  input(type="text" class="form-control" name="debt" placeholder="Debt" required="" style="")
+
+                div(class="form-group")
+                  label REGION
+                  input(type="text" class="form-control" name="region" placeholder="Region" required="" style="")
+
+                div(class="form-group")
+                  label ADDITIONAL
+                  input(type="text" class="form-control" name="additional" placeholder="Additional" required="" style="")
+
+                div(class="form-footer")
+                  button(class="btn btn-primary btn-px-80 float-right" type="button" disabled="disabled") Submit
+
+
+
+
+
+          div(id="listings" class="content-divs" style="display: none")
+            form(name="addListingForm" style="")
+              h3(class="modal-title") LISTING
+
+              div(class="form-body")
+                div(class="form-group")
+                  label Name
+                  input(type="text" class="form-control" name="name" placeholder="Enter Name" required="" style="")
+
+                div(class="form-group")
+                  label Summary
+                  input(type="text" class="form-control" name="summary" placeholder="Enter Summary" required="" style="")
+
+
+                div(class="form-group")
+                  label Description(br)
+                  textarea(rows="20" cols="60" style="border: 1px solid black")
+
+
+                div(class="form-footer")
+                  button(class="btn btn-primary btn-px-80 float-right" type="button" disabled="disabled") Submit
+
+
+

@@ -1,0 +1,37 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/buysell.css')
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
+    link(rel='shortcut icon', href='//cdn2.auth0.com/styleguide/latest/lib/logos/img/favicon.png')
+
+
+  body
+    nav(class='navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse navbar-expand-md' style='background-image: url("img/blue_background.png")')
+        button(class='navbar-toggler navbar-toggler-right' type='button' data-toggle='collapse' data-target='#navbarsExampleDefault' aria-controls='navbarsExampleDefault' aria-expanded='false' aria-label='Toggle navigation')
+            span(class='navbar-toggler-icon')
+
+        div(class='collapse navbar-collapse' id='navbarsExampleDefault')
+            ul(class='navbar-nav mr-auto')
+                li(class='nav-item active')
+                    a(href='home.html')
+                        img(id='logo' src='img/logo_top.png' alt='StratDeal Logo')
+
+            div
+                ul(class='navbar-nav mr-auto')
+                    li(class='nav-item active')
+                        a(class='nav-link' href='home.html') About
+
+                    li(class='nav-item')
+                        a(class='nav-link' href='listings.html') For Sale
+                    li(class='nav-item dropdown')
+                        a(class='nav-link dropdown-toggle' href='#' id='dropdown01' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Language
+                        div(class='dropdown-menu' aria-labelledby='dropdown01')
+                            a(class='dropdown-item' href='#') English
+                            a(class='dropdown-item' href='#') Portugese
+                    li(class='nav-item')
+                        a(href='/login')
+                            img(src='img/icon_user.png')
+                    li(class='nav-item')
+    block content
